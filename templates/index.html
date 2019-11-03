@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+      <nav>
+    	<div class="nav-wrapper">
+      	<form>
+        <div class="input-field">
+         <input id="search" type="search" required>
+         <label style="margin-left:150px;" class="label-icon" for="search"><i class="material-icons">Search Restaurants</i></label>
+         <i class="material-icons">X</i>
+         </div>
+        </form>
+       </div>
+     </nav>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+     {% for row in col %}
+      <div class="row">
+       <ul class="collection">
+       <li class="collection-item avatar">
+       <i class="material-icon circle">folder</i>
+       <span class="title">{{ row.0 }}</span>
+       <p>{{ row.1 }} </p><br>
+       <p>{{ row.2 }}</p>
+       <a href="#!" class="secondary-content"><i class="material-icons">{{ row.3 }}</i></a>
+    </li>
+  </ul>
+  {% endfor %}
+            
+      </div>
+
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  </body>
+</html:w
+>
